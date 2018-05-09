@@ -1,6 +1,10 @@
-import React from 'react'
+import * as React from 'react';
+import { ListItemProps } from './interfaces';
 
-export default ({ title, description }) => (
+interface Props extends ListItemProps {
+}
+
+const Card: React.SFC<Props> = ({ title, description }: Props) => (
   <article className="center mw5 mw6-ns hidden ba">
     <h1 className="f4 bg-near-black white mv0 pv2 ph3">{title}</h1>
     <div className="pa3 bt">
@@ -9,4 +13,6 @@ export default ({ title, description }) => (
       </p>
     </div>
   </article>
-)
+);
+
+export default Card;

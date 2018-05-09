@@ -1,26 +1,38 @@
 {
-  "name": "gtd-er",
+  "name": "react-todo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "json-server --watch ./db.json & npm run start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "css": "tachyons src/css/app.css > src/index.css --minify",
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "css": "tachyons src/app.css > src/index.css --minify",
     "prestart": "npm run css",
     "prebuild": "npm run css"
   },
   "dependencies": {
+    "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "redux-select": "^3.5.2",
     "styled-components": "^3.2.6",
     "tachyons": "^4.9.1",
     "tachyons-cli": "^1.3.0"
   },
   "devDependencies": {
-    "json-server": "^0.12.2"
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.0.4",
+    "@types/react": "^16.3.13",
+    "@types/react-dom": "^16.0.5",
+    "json-server": "^0.12.2",
+    "react-scripts-ts": "^2.15.1",
+    "tslint": "^5.10.0",
+    "tslint-react": "^3.5.1",
+    "typescript": "^2.7.2"
   }
 }
