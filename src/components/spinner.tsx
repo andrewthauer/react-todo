@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-type Props = { active: boolean };
+type Props = {
+  active: boolean
+};
 
 const Spinner: React.SFC<Props> = ({ active }: Props) => (
   <span className="pa2">

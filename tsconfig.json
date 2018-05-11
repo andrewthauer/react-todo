@@ -8,16 +8,14 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "src",
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
-    "baseUrl": "src",
+    "rootDir": "src",
+    "baseUrl": ".",
     "paths": {
-      "components/*": [ "components/*" ],
-      "services/*": [ "services/*" ],
-      "utils/*": [ "utils/*" ]
+      "@app/*": [ "src/*" ]
     }
   },
   "exclude": [
