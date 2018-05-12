@@ -4,7 +4,9 @@ import {
   Header,
   Main,
  } from '@app/layout';
-import TodoList from '@app/todos/todo-list';
+import {
+  TodoListContainer
+} from '@app/todos';
 import './index.css';
 
 class App extends React.Component {
@@ -13,7 +15,7 @@ class App extends React.Component {
       <>
         <Header />
         <Main>
-          <TodoList />
+          <TodoListContainer />
         </Main>
         <Footer />
       </>
