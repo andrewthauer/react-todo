@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Todo, getItems } from '@app/services/api';
+import { Todo, getTodos } from '@app/services/api';
 import {
   Spinner,
   Title,
@@ -12,15 +12,15 @@ import TodoCardList from './todo-card-list';
 type Props = Partial<{}>;
 
 type State = {
-  fetching: boolean,
-  items: Todo[],
+  todos: Todo[],
+  loading: boolean,
   view: ListViewType,
   showDetails: boolean,
 };
 
 const initialState: State = {
-  fetching: false,
-  items: [],
+  loading: false,
+  todos: [],
   view: ListViewType.list,
   showDetails: false,
 };
@@ -34,9 +34,9 @@ export default class TodoListContainer extends React.Component<Props, State> {
   }
 
   componentDidMount() {
-    this.setState({ fetching: true });
-    getItems()
-      .then(items => this.setState({ items: items, fetching: false }));
+    this.setState({ loading: true });
+    getTodos()
+      .then(items => this.setState({ todos: items, loading: false }));
   }
 
   changeView(view: ListViewType) {
@@ -49,8 +49,8 @@ export default class TodoListContainer extends React.Component<Props, State> {
 
   render() {
     const {
-      items,
-      fetching,
+      todos,
+      loading,
       view,
       showDetails,
     } = this.state;
@@ -58,23 +58,20 @@ export default class TodoListContainer extends React.Component<Props, State> {
     return (
       <div>
         <div className="cf">
-          <div className="fl w-100 w-50-ns">
-            <Title children="Items" className="dib" />
-            <Spinner active={fetching} />
-          </div>
-          <div className="fr w-100 w-50-ns tr">
+          <div className="fl w-100 w-50-ns tl">
             <TodoListToolbar
               showDetailsToggled={e => this.showDetailsToggled(e)}
               selectedView={view}
               viewChanged={e => this.changeView(e)}
             />
+            <Spinner active={loading} />
           </div>
         </div>
 
         <section className="cf">
           {view === ListViewType.list
-            ? <TodoList todos={items} showDetails={this.state.showDetails} />
-            : <TodoCardList todos={items} />
+            ? <TodoList todos={todos} showDetails={this.state.showDetails} />
+            : <TodoCardList todos={todos} />
           }
         </section>
       </div>

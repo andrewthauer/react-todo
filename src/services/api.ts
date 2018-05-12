@@ -9,7 +9,7 @@ export interface Todo {
   tags: string[];
 }
 
-export function getItems(): Promise<Todo[]> {
+export function getTodos(): Promise<Todo[]> {
   return new Promise((resolve, reject) => {
     fetch(`${BASE_URL}/items`)
       .then(res => res.json())

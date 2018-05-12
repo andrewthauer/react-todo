@@ -20,7 +20,17 @@ const TodoListToolbar: React.SFC<Props> = ({
   viewChanged,
 }: Props) => (
   <Toolbar>
-    <span>
+    <ToolbarItem
+      icon="list-ul"
+      selected={selectedView === ListViewType.list}
+      onClick={e => viewChanged(ListViewType.list)}
+    />
+    <ToolbarItem
+      icon="th"
+      selected={selectedView === ListViewType.card}
+      onClick={e => viewChanged(ListViewType.card)}
+    />
+    <span className="mh3">
       <CheckBox
         id="toggle-list-details"
         type="checkbox"
@@ -33,16 +43,6 @@ const TodoListToolbar: React.SFC<Props> = ({
         children="Show Details"
       />
     </span>
-    <ToolbarItem
-      icon="list-ul"
-      selected={selectedView === ListViewType.list}
-      onClick={e => viewChanged(ListViewType.list)}
-    />
-    <ToolbarItem
-      icon="th"
-      selected={selectedView === ListViewType.card}
-      onClick={e => viewChanged(ListViewType.card)}
-    />
   </Toolbar>
 );
 
