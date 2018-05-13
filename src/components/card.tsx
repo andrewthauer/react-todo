@@ -5,7 +5,7 @@ type Props = Partial<{
   description?: string,
 }>;
 
-const Card: React.SFC<Props> = ({ title, description }: Props) => (
+export const Card: React.SFC<Props> = ({ title, description }: Props) => (
   <article className="center mw5 mw6-ns hidden ba">
     <h1 className="f4 bg-gray white mv0 pv2 ph3">{title}</h1>
     <div className="pa3 bt">

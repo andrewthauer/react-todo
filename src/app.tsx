@@ -1,29 +1,27 @@
 import * as React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { routes } from './routes';
 import {
   Footer,
   Header,
   Main,
  } from '@app/layout';
-import {
-  About,
-  Dashboard,
-  Home,
-} from '@app/screens';
 import './index.css';
 
-class App extends React.Component {
+export class App extends React.Component {
   render() {
     return (
       <>
         <Header />
         <Main>
-          <Route exact="" path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/dashboard" component={Dashboard} />
+          {routes.map((route, index) => (
+            <Route
+              key={index}
+              path={route.path}
+              exact={route.exact}
+              component={route.main}
+            />
+          ))}
         </Main>
         <Footer />
       </>

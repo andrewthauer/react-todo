@@ -4,7 +4,7 @@ interface Props {
   text: string;
 }
 
-function Editable({ text }: Props) {
+export function Editable({ text }: Props) {
   return (
     <span>{text}</span>
   );

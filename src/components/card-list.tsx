@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Card from './card';
+import { Card } from './card';
 
 type Props = {
   items: Array<ItemProps>
@@ -11,7 +11,7 @@ type ItemProps = {
   description: string,
 };
 
-function CardList({ items }: Props) {
+export function CardList({ items }: Props) {
   return (
     <div className="cf pa2">
       {items.map((item, idx) => (

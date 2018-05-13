@@ -64,7 +64,10 @@ export const TextBox = styled.input.attrs({
 export const CheckBox = styled.input.attrs({
   type: 'checkbox',
   className: 'pa2',
-})``;
+})`
+  height: 30px;
+  width: 30px;
+`;
 
 //
 // Tables

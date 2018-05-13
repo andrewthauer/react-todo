@@ -3,7 +3,7 @@ import {
   TodoListContainer
 } from '@app/todos';
 
-const Dashboard = () => (
+export const Dashboard = () => (
   <div>
     <h2>Dashboard</h2>
     <TodoListContainer />

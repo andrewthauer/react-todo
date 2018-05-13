@@ -8,7 +8,7 @@ type Props = {
   showDetails?: boolean,
 };
 
-const TodoItem: React.SFC<Props> = ({
+export const TodoItem: React.SFC<Props> = ({
   id,
   title,
   description,

@@ -1,8 +1,11 @@
 import * as React from 'react';
+import {
+  Title,
+} from '@app/components';
 
-const Home = () => (
+export const Home = () => (
   <div>
-    <h2>Home</h2>
+    <Title>Home</Title>
   </div>
 );
 

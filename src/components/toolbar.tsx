@@ -1,10 +1,13 @@
 import * as React from 'react';
-import ToolbarItem from './toolbar-item';
 
-const Toolbar: React.SFC = (props) => (
-  <span>
-    {props.children}
-  </span>
+type Props = Partial<{
+  children: any;
+}>;
+
+export const Toolbar: React.SFC = ({ children }) => (
+  <div className="flex items-center">
+    {children}
+  </div>
 );
 
 export default Toolbar;

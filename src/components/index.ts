@@ -1,7 +1,6 @@
+export * from './card-list';
+export * from './card';
+export * from './spinner';
 export * from './styled';
-
-export { default as CardList } from './card-list';
-export { default as Card } from './card';
-export { default as Spinner } from './spinner';
-export { default as ToolbarItem } from './toolbar-item';
-export { default as Toolbar } from './toolbar';
+export * from './toolbar-items';
+export * from './toolbar';

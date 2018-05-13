@@ -12,7 +12,7 @@ type Props = Partial<{
   showDetails: boolean,
 }>;
 
-const TodoCardList: React.SFC<Props> = ({
+export const TodoList: React.SFC<Props> = ({
   todos = [],
   showDetails = false,
 }: Props) => (
@@ -29,4 +29,4 @@ const TodoCardList: React.SFC<Props> = ({
   </List>
 );
 
-export default TodoCardList;
+export default TodoList;

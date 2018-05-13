@@ -4,7 +4,7 @@ type Props = {
   active: boolean
 };
 
-const Spinner: React.SFC<Props> = ({ active }: Props) => (
+export const Spinner: React.SFC<Props> = ({ active }: Props) => (
   <span className="pa2">
     {active && <i className="fa fa-spinner fa-spin" />}
   </span>

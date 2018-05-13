@@ -25,7 +25,7 @@ const initialState: State = {
   showDetails: false,
 };
 
-export default class TodoListContainer extends React.Component<Props, State> {
+export class TodoListContainer extends React.Component<Props, State> {
   state: State = initialState;
 
   constructor(props: Props) {
@@ -78,3 +78,5 @@ export default class TodoListContainer extends React.Component<Props, State> {
     );
   }
 }
+
+export default TodoListContainer;

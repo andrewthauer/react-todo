@@ -7,7 +7,7 @@ type Props = Partial<{
   todos: Todo[],
 }>;
 
-const TodoCardList: React.SFC<Props> = ({
+export const TodoCardList: React.SFC<Props> = ({
   todos = []
 }: Props) => (
   <div className="cf">
