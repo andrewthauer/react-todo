@@ -1,9 +1,12 @@
 import * as React from 'react';
+import {
+  Title,
+} from '@app/components';
 
 export const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
+  <>
+    <Title>About</Title>
+  </>
 );
 
 export default About;

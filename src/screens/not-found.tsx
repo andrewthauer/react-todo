@@ -3,10 +3,10 @@ import {
   Title,
 } from '@app/components';
 
-export const Home = () => (
+export const NotFound = () => (
   <>
-    <Title>Home</Title>
+    <Title>404 - Not Found</Title>
   </>
 );
 
-export default Home;
+export default NotFound;

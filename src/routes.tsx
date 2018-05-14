@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   About,
-  Dashboard,
   Home,
+  NotFound,
+  Todos,
 } from '@app/screens';
 
 export const routes = [
@@ -19,10 +20,15 @@ export const routes = [
     main: () => (<About />),
   },
   {
-    path: '/dashboard',
-    title: 'Dashboard',
-    main: () => (<Dashboard />),
-  }
+    path: '/todos',
+    title: 'Todos',
+    main: () => (<Todos />),
+  },
+  {
+    path: '',
+    title: '404',
+    main: () => (<NotFound />),
+  },
 ];
 
 export default routes;

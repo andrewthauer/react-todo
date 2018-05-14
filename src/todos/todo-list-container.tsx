@@ -57,15 +57,16 @@ export class TodoListContainer extends React.Component<Props, State> {
 
     return (
       <div>
-        <div className="cf">
-          <div className="fl w-100 w-50-ns tl">
-            <TodoListToolbar
-              showDetailsToggled={e => this.showDetailsToggled(e)}
-              selectedView={view}
-              viewChanged={e => this.changeView(e)}
-            />
-            <Spinner active={loading} />
-          </div>
+        <div className="dib">
+          <TodoListToolbar
+            showDetailsToggled={e => this.showDetailsToggled(e)}
+            selectedView={view}
+            viewChanged={e => this.changeView(e)}
+          />
+        </div>
+
+        <div className="dib tr fr">
+          <Spinner active={loading} />
         </div>
 
         <section className="cf">

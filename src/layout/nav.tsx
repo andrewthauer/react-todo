@@ -1,16 +1,22 @@
 import * as React from 'react';
-import {
-  Route,
-  Link,
-} from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 
-const linkClass = 'link dim gray f6 f5-ns dib mr3';
+const navLink = (to: string, text: string) => (
+  <NavLink
+    className="link dark-gray f4 dib ttu mr3"
+    activeClassName="red"
+    exact={true}
+    to={to}
+  >
+    {text}
+  </NavLink>
+);
 
 export const Nav: React.SFC = () => (
   <nav className="pa3 pa4-ns">
-    <Link className={linkClass} to="/">Home</Link>
-    <Link className={linkClass} to="/about">About</Link>
-    <Link className={linkClass} to="/dashboard">Dashboard</Link>
+    {navLink('/', 'Home')}
+    {navLink('/about', 'About')}
+    {navLink('/todos', 'To-Dos')}
   </nav>
 );
 

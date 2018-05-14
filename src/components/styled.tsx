@@ -63,10 +63,11 @@ export const TextBox = styled.input.attrs({
 
 export const CheckBox = styled.input.attrs({
   type: 'checkbox',
-  className: 'pa2',
+  className: '',
 })`
   height: 30px;
   width: 30px;
+  vertical-align: middle;
 `;
 
 //

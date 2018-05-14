@@ -5,7 +5,7 @@ type Props = Partial<{
 }>;
 
 export const Toolbar: React.SFC = ({ children }) => (
-  <div className="flex items-center">
+  <div className="flex items-center dib">
     {children}
   </div>
 );
