@@ -1,18 +1,11 @@
-import * as React from 'react';
-import * as classNames from 'classnames';
+import React from 'react';
 import { ListViewType } from './constants';
-import {
-  CheckBox,
-  Label,
-  Toolbar,
-  ToolbarCheckBox,
-  ToolbarToggleButton,
-} from '@app/components';
+import { Toolbar, ToolbarCheckBox, ToolbarToggleButton } from '@app/components';
 
 type Props = {
-  showDetailsToggled(show: boolean),
-  selectedView: ListViewType,
-  viewChanged(view: ListViewType),
+  showDetailsToggled(show: boolean);
+  selectedView: ListViewType;
+  viewChanged(view: ListViewType);
 };
 
 export const TodoListToolbar: React.SFC<Props> = ({

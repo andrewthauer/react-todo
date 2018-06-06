@@ -1,10 +1,6 @@
-import * as React from 'react';
-import {
-  Title,
-} from '@app/components';
-import {
-  TodoListContainer
-} from '@app/todos';
+import React from 'react';
+import { Title } from '@app/components';
+import { TodoListContainer } from '@app/todos';
 
 export const Todos = () => (
   <>

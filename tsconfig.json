@@ -8,6 +8,7 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": false,
@@ -15,10 +16,8 @@
     "rootDir": "src",
     "baseUrl": ".",
     "paths": {
-      "@app/*": [ "src/*" ]
+      "@app/*": ["src/*"]
     }
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

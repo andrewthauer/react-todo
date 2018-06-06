@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 
 type Props = Partial<{
-  active: boolean
+  active: boolean;
 }>;
 
 export const Spinner: React.SFC<Props> = ({ active }: Props) => (

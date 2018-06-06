@@ -1,11 +1,12 @@
-import * as React from 'react';
-import {
-  Title,
-} from '@app/components';
+import React from 'react';
+import { EditableLabel, Title } from '@app/components';
 
 export const Home = () => (
   <>
     <Title>Home</Title>
+    <p>
+      <EditableLabel value={'Some Value'} />
+    </p>
   </>
 );
 

@@ -1,8 +1,5 @@
-import * as React from 'react';
-import {
-  Headline,
-  SubHeadline,
-} from '@app/components';
+import React from 'react';
+import { Headline } from '@app/components';
 import Nav from './nav';
 
 export const Header: React.SFC = () => (

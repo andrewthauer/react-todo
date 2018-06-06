@@ -1,14 +1,14 @@
-import * as React from 'react';
+import React from 'react';
 import { Card } from './card';
 
 type Props = {
-  items: Array<ItemProps>
+  items: Array<ItemProps>;
 };
 
 type ItemProps = {
-  key: string,
-  title: string,
-  description: string,
+  key: string;
+  title: string;
+  description: string;
 };
 
 export function CardList({ items }: Props) {

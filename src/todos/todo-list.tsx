@@ -1,15 +1,11 @@
-import * as React from 'react';
-import * as classNames from 'classnames';
+import React from 'react';
 import { Todo } from '@app/services/api';
-import {
-  List,
-  ListItem,
-} from '@app/components';
+import { List, ListItem } from '@app/components';
 import TodoListItem from './todo-list-item';
 
 type Props = Partial<{
-  todos: Todo[],
-  showDetails: boolean,
+  todos: Todo[];
+  showDetails: boolean;
 }>;
 
 export const TodoList: React.SFC<Props> = ({

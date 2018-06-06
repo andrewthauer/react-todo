@@ -1,33 +1,27 @@
-import * as React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import {
-  About,
-  Home,
-  NotFound,
-  Todos,
-} from '@app/screens';
+import React from 'react';
+import { About, Home, NotFound, Todos } from '@app/screens';
 
 export const routes = [
   {
     path: '/',
     exact: true,
     title: 'Home',
-    main: () => (<Home />),
+    main: () => <Home />,
   },
   {
     path: '/about',
     title: 'About',
-    main: () => (<About />),
+    main: () => <About />,
   },
   {
     path: '/todos',
     title: 'Todos',
-    main: () => (<Todos />),
+    main: () => <Todos />,
   },
   {
     path: '',
     title: '404',
-    main: () => (<NotFound />),
+    main: () => <NotFound />,
   },
 ];
 

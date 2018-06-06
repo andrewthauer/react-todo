@@ -1,11 +1,12 @@
-import * as React from 'react';
-import * as classNames from 'classnames';
+import React from 'react';
+import classNames from 'classnames';
+import { EditableLabel } from '@app/components';
 
 type Props = {
-  id?: string,
-  title: string,
-  description?: string,
-  showDetails?: boolean,
+  id?: string;
+  title: string;
+  description?: string;
+  showDetails?: boolean;
 };
 
 export const TodoItem: React.SFC<Props> = ({
@@ -16,11 +17,9 @@ export const TodoItem: React.SFC<Props> = ({
 }: Props) => (
   <div>
     <div className="w-100-ns">
-      {title}
+      <EditableLabel value={title} placeholder="Name ..." />
     </div>
-    <div className={classNames({ dn: !showDetails })}>
-      {description}
-    </div>
+    <div className={classNames({ dn: !showDetails })}>{description}</div>
   </div>
 );
 

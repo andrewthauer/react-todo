@@ -13,8 +13,7 @@ export function getTodos(): Promise<Todo[]> {
   return new Promise((resolve, reject) => {
     fetch(`${BASE_URL}/items`)
       .then(res => res.json())
-      .then(result => sleep(1000)
-        .then(() => resolve(result  as Todo[])))
+      .then(result => sleep(1000).then(() => resolve(result as Todo[])))
       .catch(reject);
   });
 }

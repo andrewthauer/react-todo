@@ -1,9 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import { Todo, getTodos } from '@app/services/api';
-import {
-  Spinner,
-  Title,
-} from '@app/components';
+import { Spinner } from '@app/components';
 import { ListViewType } from './constants';
 import TodoListToolbar from './todo-list-toolbar';
 import TodoList from './todo-list';
@@ -12,10 +9,10 @@ import TodoCardList from './todo-card-list';
 type Props = Partial<{}>;
 
 type State = {
-  todos: Todo[],
-  loading: boolean,
-  view: ListViewType,
-  showDetails: boolean,
+  todos: Todo[];
+  loading: boolean;
+  view: ListViewType;
+  showDetails: boolean;
 };
 
 const initialState: State = {
@@ -35,25 +32,19 @@ export class TodoListContainer extends React.Component<Props, State> {
 
   componentDidMount() {
     this.setState({ loading: true });
-    getTodos()
-      .then(items => this.setState({ todos: items, loading: false }));
+    getTodos().then(items => this.setState({ todos: items, loading: false }));
   }
 
   changeView(view: ListViewType) {
     this.setState({ view });
   }
 
-  showDetailsToggled = (showDetails: boolean) => {
+  showDetailsToggled(showDetails: boolean) {
     this.setState((prevState, props) => ({ showDetails }));
   }
 
   render() {
-    const {
-      todos,
-      loading,
-      view,
-      showDetails,
-    } = this.state;
+    const { todos, loading, view, showDetails } = this.state;
 
     return (
       <div>
@@ -70,10 +61,11 @@ export class TodoListContainer extends React.Component<Props, State> {
         </div>
 
         <section className="cf">
-          {view === ListViewType.list
-            ? <TodoList todos={todos} showDetails={this.state.showDetails} />
-            : <TodoCardList todos={todos} />
-          }
+          {view === ListViewType.list ? (
+            <TodoList todos={todos} showDetails={this.state.showDetails} />
+          ) : (
+            <TodoCardList todos={todos} />
+          )}
         </section>
       </div>
     );

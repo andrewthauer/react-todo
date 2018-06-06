@@ -1,7 +1,5 @@
-import * as React from 'react';
-import {
-  Title,
-} from '@app/components';
+import React from 'react';
+import { Title } from '@app/components';
 
 export const About = () => (
   <>

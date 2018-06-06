@@ -9,7 +9,8 @@ export const Headline = styled.h1.attrs({
 })``;
 
 export const SubHeadline = styled.h1.attrs({
-  className: 'f2 f-subheadline lh-title mid-gray small-caps tracked-mega avenir',
+  className:
+    'f2 f-subheadline lh-title mid-gray small-caps tracked-mega avenir',
 })``;
 
 export const Title = styled.h1.attrs({
@@ -75,21 +76,21 @@ export const CheckBox = styled.input.attrs({
 //
 
 export const Table = styled.table.attrs({
-  className: 'table'
+  className: 'table',
 })``;
 
 export const TableHeader = styled.thead.attrs({
-  className: ''
+  className: '',
 })``;
 
 export const TableFooter = styled.tfoot.attrs({
-  className: ''
+  className: '',
 })``;
 
 export const TableRow = styled.tr.attrs({
-  className: ''
+  className: '',
 })``;
 
 export const TableCell = styled.tr.attrs({
-  className: ''
+  className: '',
 })``;

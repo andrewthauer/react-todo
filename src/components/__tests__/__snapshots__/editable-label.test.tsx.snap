@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditableLabel renders correctly 1`] = `
+Array [
+  <span>
+    Some Value
+  </span>,
+  <button
+    className="mh1 gray link"
+    onClick={[Function]}
+  >
+    <i
+      className="fa fa-edit"
+    />
+  </button>,
+]
+`;
+
+exports[`EditableLabel swithes to edit mode 1`] = `
+Array [
+  <span>
+    Some Value
+  </span>,
+  <button
+    className="mh1 gray link"
+    onClick={[Function]}
+  >
+    <i
+      className="fa fa-edit"
+    />
+  </button>,
+]
+`;
