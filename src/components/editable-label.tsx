@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 type Props = Partial<{
   value?: string;
@@ -68,7 +69,7 @@ export class EditableLabel extends React.Component<Props, State> {
       <>
         <span>{this.state.value}</span>
         <button className="mh1 gray link" onClick={e => this.startEdit()}>
-          <i className="fa fa-edit" />
+          <FontAwesomeIcon icon="edit" />
         </button>
       </>
     );
@@ -87,10 +88,10 @@ export class EditableLabel extends React.Component<Props, State> {
           onChange={e => this.handleChange(e)}
         />
         <button className="mh1 gray link" onClick={e => this.commitEdit()}>
-          <i className="fa fa-check" />
+          <FontAwesomeIcon icon="check" />
         </button>
         <button className="mh1 gray link" onClick={e => this.cancelEdit()}>
-          <i className="fa fa-ban" />
+          <FontAwesomeIcon icon="ban" />
         </button>
       </>
     );

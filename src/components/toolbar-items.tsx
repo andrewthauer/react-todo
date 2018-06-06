@@ -1,4 +1,5 @@
 import React from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { CheckBox, Label } from '@app/components';
 
 type Props = Partial<{
@@ -32,7 +33,7 @@ export const ToolbarToggleButton: React.SFC<ToggleButtonProps> = ({
     className={`f5 dim br1 ph3 pv2 mr2 ${selected ? 'blue' : 'gray'}`}
     onClick={onClick}
   >
-    <i className={`fa fa-${icon}`} />
+    <FontAwesomeIcon icon={icon} />
   </button>
 );
 
