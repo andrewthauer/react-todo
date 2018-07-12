@@ -1,10 +1,10 @@
 import React from 'react';
 import { Todo, getTodos } from '@app/services/api';
 import { Spinner } from '@app/components';
-import { ListViewType } from './constants';
-import TodoListToolbar from './todo-list-toolbar';
-import TodoList from './todo-list';
-import TodoCardList from './todo-card-list';
+import { ListViewType } from '@app/todos/constants';
+import TodoListToolbar from '@app/todos/todo-list-toolbar';
+import TodoList from '@app/todos/todo-list';
+import TodoCardList from '@app/todos/todo-card-list';
 
 type Props = Partial<{}>;
 

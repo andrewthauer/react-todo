@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from './card';
+import { Card } from '@app/components/card';
 
 type Props = {
   items: Array<ItemProps>;

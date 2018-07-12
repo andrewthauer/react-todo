@@ -1,32 +1,7 @@
-import React from 'react';
-import { ReactNode } from 'react';
+import styled from 'styled-components';
 
-const initialState = {};
+export const List = styled.ul.attrs({
+  className: 'list pl0 ml0 ba b--light-silver br2',
+})``;
 
-type State = Readonly<typeof initialState>;
-type Props = Partial<{
-  items: Array<any>;
-  children: ReactNode;
-  render: RenderCallback;
-}>;
-
-type RenderCallback = (args: {}) => JSX.Element;
-
-export default class List extends React.Component<Props, State> {
-  readonly state: State = initialState;
-
-  render() {
-    const { items = [], children, render } = this.props;
-
-    return (
-      <ul>
-        {items.map(item => {
-          // const el = render ? render(item) : <span />;
-          return React.Children.map(children, c =>
-            React.cloneElement(c as JSX.Element, item)
-          );
-        })}
-      </ul>
-    );
-  }
-}
+export default List;

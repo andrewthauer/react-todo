@@ -13,6 +13,7 @@
     "noImplicitThis": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
     "rootDir": "src",
     "baseUrl": ".",
     "paths": {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Todo } from '@app/services/api';
 import { List, ListItem } from '@app/components';
-import TodoListItem from './todo-list-item';
+import TodoListItem from '@app/todos/todo-list-item';
 
 type Props = Partial<{
   todos: Todo[];

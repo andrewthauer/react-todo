@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListViewType } from './constants';
+import { ListViewType } from '@app/todos/constants';
 import { Toolbar, ToolbarCheckBox, ToolbarToggleButton } from '@app/components';
 
 type Props = {

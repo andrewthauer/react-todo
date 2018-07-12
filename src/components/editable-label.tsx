@@ -1,5 +1,8 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import Button from '@app/components/button';
+import TextBox from '@app/components/textbox';
+import Text from '@app/components/text';
 
 type Props = Partial<{
   value?: string;
@@ -8,11 +11,11 @@ type Props = Partial<{
   valueChanged?(value: string);
 }>;
 
-type State = {
+type State = Partial<{
   value: string;
   editing: boolean;
   inputText: string;
-};
+}>;
 
 const initialState: State = {
   editing: false,
@@ -27,8 +30,10 @@ export class EditableLabel extends React.Component<Props, State> {
     super(props);
     this.state = {
       ...initialState,
-      value: props.value || '',
+      editing: props.editing || initialState.editing,
+      value: props.value || initialState.value,
     };
+    this.state.inputText = this.state.value;
   }
 
   startEdit() {
@@ -36,7 +41,7 @@ export class EditableLabel extends React.Component<Props, State> {
   }
 
   commitEdit() {
-    const value = this.state.inputText;
+    const value = this.state.inputText || '';
     this.setState({ editing: false, inputText: '', value });
     if (this.props.valueChanged) {
       this.props.valueChanged(value);
@@ -67,10 +72,10 @@ export class EditableLabel extends React.Component<Props, State> {
   renderLabel() {
     return (
       <>
-        <span>{this.state.value}</span>
-        <button className="mh1 gray link" onClick={e => this.startEdit()}>
+        <Text>{this.state.value}</Text>
+        <Button className="mh1 gray link" onClick={e => this.startEdit()}>
           <FontAwesomeIcon icon="edit" />
-        </button>
+        </Button>
       </>
     );
   }
@@ -78,8 +83,7 @@ export class EditableLabel extends React.Component<Props, State> {
   renderInput() {
     return (
       <>
-        <input
-          type="text"
+        <TextBox
           className="pa2 mt2 br2 b--black-20 ba f6"
           autoFocus={true}
           value={this.state.inputText}
@@ -87,22 +91,18 @@ export class EditableLabel extends React.Component<Props, State> {
           onKeyDown={e => this.handleInputKey(e)}
           onChange={e => this.handleChange(e)}
         />
-        <button className="mh1 gray link" onClick={e => this.commitEdit()}>
+        <Button className="mh1 gray link" onClick={e => this.commitEdit()}>
           <FontAwesomeIcon icon="check" />
-        </button>
-        <button className="mh1 gray link" onClick={e => this.cancelEdit()}>
+        </Button>
+        <Button className="mh1 gray link" onClick={e => this.cancelEdit()}>
           <FontAwesomeIcon icon="ban" />
-        </button>
+        </Button>
       </>
     );
   }
 
   render() {
-    return (
-      <>
-        {this.state.editing !== true ? this.renderLabel() : this.renderInput()}
-      </>
-    );
+    return <>{this.state.editing ? this.renderInput() : this.renderLabel()}</>;
   }
 }
 

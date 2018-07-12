@@ -12,7 +12,7 @@ type Props = Partial<{
 
 type RenderCallback = (args: {}) => JSX.Element;
 
-export default class List extends React.Component<Props, State> {
+export default class DataList extends React.Component<Props, State> {
   readonly state: State = initialState;
 
   render() {
