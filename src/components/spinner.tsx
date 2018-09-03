@@ -1,5 +1,6 @@
 import React from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 type Props = Partial<{
   active: boolean;
@@ -7,7 +8,7 @@ type Props = Partial<{
 
 export const Spinner: React.SFC<Props> = ({ active }: Props) => (
   <span className="pa2 dib">
-    {active && <FontAwesomeIcon icon="spinner" spin={true} />}
+    {active && <FontAwesomeIcon icon={faSpinner} spin={true} />}
   </span>
 );
 

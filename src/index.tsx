@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import App from '@app/app';
+import { App } from '@app/app';
 import registerServiceWorker from '@app/registerServiceWorker';
 
-import '@app/components/icons';
+import './icons';
 import './index.css';
 
 const appRoot = (

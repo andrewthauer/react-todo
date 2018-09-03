@@ -1,6 +1,6 @@
 // Util functions
 
-export * from './styled';
+export * from '@app/utils/styled';
 
 export const sleep = (ms: number) => {
   return new Promise(resolve => setTimeout(resolve, ms));

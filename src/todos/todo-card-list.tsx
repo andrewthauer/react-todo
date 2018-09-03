@@ -1,6 +1,6 @@
 import React from 'react';
 import { Todo } from '@app/services/api';
-import TodoCard from '@app/todos/todo-card';
+import { TodoCard } from '@app/todos/todo-card';
 
 type Props = Partial<{
   todos: Todo[];

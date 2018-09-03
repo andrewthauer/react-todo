@@ -1,8 +1,9 @@
 import React from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import Button from '@app/components/button';
-import TextBox from '@app/components/textbox';
-import Text from '@app/components/text';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBan, faCheck, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { Button } from './button';
+import { TextBox } from './textbox';
+import { Label } from './label';
 
 type Props = Partial<{
   value?: string;
@@ -72,9 +73,9 @@ export class EditableLabel extends React.Component<Props, State> {
   renderLabel() {
     return (
       <>
-        <Text>{this.state.value}</Text>
+        <Label>{this.state.value}</Label>
         <Button className="mh1 gray link" onClick={e => this.startEdit()}>
-          <FontAwesomeIcon icon="edit" />
+          <FontAwesomeIcon icon={faEdit} />
         </Button>
       </>
     );
@@ -92,10 +93,10 @@ export class EditableLabel extends React.Component<Props, State> {
           onChange={e => this.handleChange(e)}
         />
         <Button className="mh1 gray link" onClick={e => this.commitEdit()}>
-          <FontAwesomeIcon icon="check" />
+          <FontAwesomeIcon icon={faCheck} />
         </Button>
         <Button className="mh1 gray link" onClick={e => this.cancelEdit()}>
-          <FontAwesomeIcon icon="ban" />
+          <FontAwesomeIcon icon={faBan} />
         </Button>
       </>
     );

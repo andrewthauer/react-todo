@@ -1,5 +1,5 @@
 import React from 'react';
-import { EditableLabel } from '@app/components/editable-label';
+import { EditableLabel } from '../editable-label';
 import renderer from 'react-test-renderer';
 
 describe('EditableLabel', () => {

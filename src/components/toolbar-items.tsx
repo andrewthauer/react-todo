@@ -1,5 +1,6 @@
 import React from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { CheckBox, Label } from '@app/components';
 
 type Props = Partial<{
@@ -9,7 +10,7 @@ type Props = Partial<{
 
 type ToggleButtonProps = Props &
   Partial<{
-    icon: string;
+    icon: IconProp;
     selected?: boolean;
     onClick(e: React.MouseEvent<HTMLElement>): void;
   }>;
@@ -25,7 +26,7 @@ const ToolbarItem: React.SFC<Props> = ({ children }: Props) => (
 );
 
 export const ToolbarToggleButton: React.SFC<ToggleButtonProps> = ({
-  icon,
+  icon = 'square',
   selected,
   onClick,
 }: ToggleButtonProps) => (

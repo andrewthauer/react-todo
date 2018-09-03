@@ -2,11 +2,15 @@
 
 exports[`EditableLabel renders correctly 1`] = `
 Array [
-  <span>
+  <span
+    className="sc-htpNat lh-copy KtFsv"
+  >
     Some Value
   </span>,
   <button
-    className="mh1 gray link"
+    className="mh1 gray link sc-bdVaJa 
+    f5 link br1 ph3 pv2 mb2 br3 dib white bg-light-blue
+   bDWFJH"
     onClick={[Function]}
   />,
 ]
